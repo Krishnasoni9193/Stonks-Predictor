@@ -220,19 +220,19 @@ def process_and_predict(uploaded_file):
 # Streamlit App Layout
 st.set_page_config(page_title="Intelligent Data Predictor with Stock News", layout="wide")
 
-st.title("🧠 Intelligent Data Predictor")
+st.title("🧠 Stonks Predictor Intelligence")
 
 col1, col2 = st.columns([3, 1])
 
 with col1:
-    st.write("Upload a CSV file for smart data analysis and prediction!")
+    st.write("Upload a file with clean and beautiful attributes,and that's it! Give me some seconds to analyze it for you!")
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 
     if uploaded_file is not None:
         process_and_predict(uploaded_file)
 
 with col2:
-    st.subheader("📈 Real-Time Stock News")
+    st.subheader("📈Live Stock News")
     news_articles = fetch_indian_stock_news()
 
     if news_articles:
